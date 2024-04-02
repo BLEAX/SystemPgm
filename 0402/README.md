@@ -43,4 +43,4 @@ $< : 현재 목표 파일보다 최근에 갱신된 파일
         
 ex) fd = open("account", O_RDONLY);
     fd = open(argv[1], O_RDWR);
-    fd = open(
+    fd = open(argv[1], O_RDWR | O_CREAT, 0600); (0600은 8진수)
