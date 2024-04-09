@@ -28,7 +28,7 @@ int open (const char *path, int oflag, [ mode_t mode ]);**
     - **기존 파일이 있는 경우에는 그 내용을 삭제하고 연다.**
     - 
 
-```c
+```
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
@@ -44,7 +44,7 @@ int creat(const char *path, mode_t mode );
 
 - **close() 시스템 호출은 fd 가 나타내는 파일을 닫는다**.
 
-```c
+```
 #include <unistd.h>
 int close( int fd );
 
@@ -101,6 +101,7 @@ int main() {
 }
 ```
 
+
 **파일 위치 포인터** 
 
 - 파일 위치 포인터는 파일 내에 읽거나 쓸 위치인 현재 파일 위치(current file position)를
@@ -118,6 +119,7 @@ off_t lseek(int fd, off_t offset, int whence);
 이동에 성공하면 현재 위치를 리턴하고 실패하면 -1을 리턴한다.
 ```
 
+
 ex)
 
 **파일 위치 이동**
@@ -128,6 +130,7 @@ lseek(fd, 100L, SEEK_SET); // 파일 시작에서 100바이트 위치로
 
 lseek(fd, 0L, SEEK)END); // 파일 끝으로 이동(append)
 
+
 **레코드 단위로 이동** ( bit < nibble < byte < word < field < **record(서로 연관있는 데이터들을 묶어 놓은 것)** < table < DB )
 
 lseek(fd, n * sizeof(record), SEEK_SET); // n+1번째 레코드 시작위치로
@@ -135,6 +138,7 @@ lseek(fd, n * sizeof(record), SEEK_SET); // n+1번째 레코드 시작위치로
 lseek(fd, sizeof(record), SEEK_CUR); // 다음 레코드 시작위치로
 
 lseek(fd, -sizeof(record), SEEK_CUR); // 전 레코드 시작위치로
+
 
 **파일 끝 이후로 이동**
 
