@@ -123,28 +123,23 @@ off_t lseek(int fd, off_t offset, int whence);
 ex)
 
 **파일 위치 이동**
-
+```
 lseek(fd, 0L, SEEK_SET); // 파일 시작으로 이동(rewind). 0L은 Long형으로 캐스팅 한것
-
 lseek(fd, 100L, SEEK_SET); // 파일 시작에서 100바이트 위치로
-
 lseek(fd, 0L, SEEK)END); // 파일 끝으로 이동(append)
-
+```
 
 **레코드 단위로 이동** ( bit < nibble < byte < word < field < **record(서로 연관있는 데이터들을 묶어 놓은 것)** < table < DB )
-
+```
 lseek(fd, n * sizeof(record), SEEK_SET); // n+1번째 레코드 시작위치로
-
 lseek(fd, sizeof(record), SEEK_CUR); // 다음 레코드 시작위치로
-
 lseek(fd, -sizeof(record), SEEK_CUR); // 전 레코드 시작위치로
-
+```
 
 **파일 끝 이후로 이동**
-
+```
 lseek(fd, sizeof(record), SEEK_END); //파일 끝에서 한 레코드 다음 위치로
-
-
+```
 
 
 
