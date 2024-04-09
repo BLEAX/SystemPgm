@@ -26,7 +26,6 @@ int open (const char *path, int oflag, [ mode_t mode ]);**
     - **path 가 나타내는 파일을 생성하고 쓰기 전용으로 연다.**
     - **생성된 파일의 사용권한은 mode 로 정한다.**
     - **기존 파일이 있는 경우에는 그 내용을 삭제하고 연다.**
-    - 
 
 ```
 #include <sys/types.h>
