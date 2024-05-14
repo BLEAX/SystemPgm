@@ -6,3 +6,10 @@ who
 
 echo는 printf처럼 뒤의 문자열 출력하는 명령어
 ex) echo this is a test
+
+expr : 
+? : 하나
+* : 전부
+
+ex) ll /dev/????
+/dev아래에 있는 4글자 이하 디렉토리, 파일 출력
