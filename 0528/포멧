@@ -11,18 +11,6 @@
 (덮어쓰기가 되므로 효율적 운용에 매우 도움이 되는 포멧 형태, 보안에 취약, 복구가 빠름)
 
 
-**Row format vs Column format**
-
-
-Row format : 행 중심 데이터 저장 방식
-특정행에 대한 접근이 매우 빠르다.
-
-
-Column format : 열 중심 데이터 저장 방식
-같은 컬럼의 값들이 하나의 연속된 메모리 블록에 저장
-주로 대규모 데이터 분석을 위해 설계된 데이터 웨어하우스 시스템에서 많이 사용
-
-
 **Low-level format vs High-level format**
 
 
